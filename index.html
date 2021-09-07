@@ -53,14 +53,14 @@
                 <a-entity
                 id = "Test"
                 look-at="[gps-camera]"
-                animation-mixer="loop: repeat"
+                animation-mixer="stop"
                 gltf-model="#animated-asset"
                 scale="0.05861318584412939 0.05861318584412939 0.05861318584412939"
                 gps-entity-place="latitude: 1.444260; longitude: 103.797142;"
-                position = "0 30 0"
+                position = "0 100 0"
                 ></a-entity>
 
-            <a-camera gps-camera rotation-reader></a-camera>
+            <a-camera look-controls-enalbed = 'false' arjs-look-controls = 'smoothingFactor:0.1' gps-camera = 'gpsMinDistance:5'  rotation-reader></a-camera>
         </a-scene>
     </body>
 </html>
