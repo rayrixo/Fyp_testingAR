@@ -1,4 +1,4 @@
-window.onload = () => {
+window.location.reload(true) = () => {
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
@@ -53,7 +53,7 @@ function renderPlaces(places) {
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('animation-mixer', '');
        model.setAttribute('scale', '0.05 0.05 0.05');
-    //    model.setAttribute('position','10 500 0');
+       model.setAttribute('position','10 500 0');
 
        model.addEventListener('loaded', () => {
            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
@@ -62,3 +62,5 @@ function renderPlaces(places) {
        scene.appendChild(model);
    });
 }
+
+Cache.delete()
