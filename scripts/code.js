@@ -43,7 +43,7 @@ function staticLoadPlaces() {
 function renderPlaces(places){
     let scene  = document.querySelector('a-scene');
 
-    places.foreach((place)=>{
+    places.forEach((place)=>{
         let latitude  = place.location.lat
         let longitude = place.location.lng
 
