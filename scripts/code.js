@@ -43,7 +43,7 @@ function staticLoadPlaces() {
 function renderPlaces(places){
     let scene  = document.querySelector('a-scene');
 
-    places.for((place)=>{
+    places.foreach((place)=>{
         let latitude  = place.location.lat
         let longitude = place.location.lng
 
@@ -51,7 +51,7 @@ function renderPlaces(places){
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         model.setAttribute('gltf-model', 'assets/asset.gltf');
         model.setAttribute('look-at', '[gps-camera]');
-        model.setAttribute('animation-mixer', 'loop:once');
+        model.setAttribute('animation-mixer', '');
         model.setAttribute('scale', '0.05 0.05 0.05');
 
         model.addEventListener('loaded',() => {
