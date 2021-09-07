@@ -53,7 +53,7 @@ function renderPlaces(places) {
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('animation-mixer', '');
        model.setAttribute('scale', '0.5 0.5 0.5');
-       model.setAttribute('position','50 500 0');
+    //    model.setAttribute('position','50 500 0');
 
        model.addEventListener('loaded', () => {
            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
