@@ -24,6 +24,7 @@
             </a-assets>
 
                 <a-entity
+                    id = "YCK"
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
@@ -32,12 +33,22 @@
                 ></a-entity>
 
                 <a-entity
+                id = "block_L"
                 look-at="[gps-camera]"
                 animation-mixer="loop: repeat"
                 gltf-model="#animated-asset"
                 scale="0.14768864307354904 0.14768864307354904 0.14768864307354904"
                 gps-entity-place="latitude: 1.3792464031689677; longitude: 103.84980618953705;"
-            ></a-entity>
+                ></a-entity>
+
+                <a-entity
+                    id = "block_A"
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    scale="0.14768864307354904 0.14768864307354904 0.14768864307354904"
+                    gps-entity-place="latitude: 1.380061558329711; longitude: 103.84853482246399;"
+                ></a-entity>
 
             <a-camera gps-camera rotation-reader></a-camera>
         </a-scene>
