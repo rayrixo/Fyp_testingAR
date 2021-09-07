@@ -41,7 +41,7 @@ function renderPlaces(places){
         let latitude  = place.location.lat
         let longitude = place.location.lng
 
-        let model = document.createElement('a-entity');
+        let model = document.querySelector('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         model.setAttribute('gltf-model', 'assets/asset.gltf');
         model.setAttribute('look-at', 'a-camera gps-camera rotation-reader');
