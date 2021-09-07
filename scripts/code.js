@@ -52,7 +52,7 @@ function renderPlaces(places) {
        model.setAttribute('gltf-model', 'assets/asset.gltf');
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('animation-mixer', '');
-       model.setAttribute('scale', '0.08 0.08 0.08');
+       model.setAttribute('scale', '0.5 0.5 0.5');
     //    model.setAttribute('position','10 500 0');
 
        model.addEventListener('loaded', () => {
