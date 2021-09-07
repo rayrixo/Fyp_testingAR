@@ -44,7 +44,7 @@ function renderPlaces(places){
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         model.setAttribute('gltf-model', 'assets/asset.gltf');
-        model.setAttribute('look-at', '[gps-camera]');
+        model.setAttribute('look-at', 'gps-camera');
         model.setAttribute('animation-mixer', '');
         model.setAttribute('scale', '0.05 0.05 0.05');
 
