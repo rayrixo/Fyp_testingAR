@@ -1,8 +1,9 @@
+// getting places from APIs
 function loadPlaces(position) {
     const params = {
         radius: 300,    // search places not farther than this value (in meters)
-        clientId: '<YOUR-CLIENT-ID>',
-        clientSecret: 'YOUR-CLIENT-SECRET',
+        clientId: 'CRDMPAGPE4KCZOMKKCLKKSJOKUKJZVE54LUROL2GLDS3UMTA',
+        clientSecret: 'TCWSXDU33J30GFTTPDRVL4SXMGMT3ON0ZWZVXWQPPINDMMWD',
         version: '20300101',    // foursquare versioning, required but unuseful for this demo
     };
 
@@ -33,7 +34,7 @@ function loadPlaces(position) {
 window.onload = () => {
     const scene = document.querySelector('a-scene');
 
-    // first get current user locations
+    // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
 
         // than use it to load from remote APIs some places nearby
