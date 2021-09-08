@@ -31,7 +31,7 @@ function staticLoadPlaces() {
                 lat: 1.380099,
                 lng: 103.848593,
             },
-            test:'assets/asset.gltf'
+            test:'assets/buster_drone/scene.gltf'
 
         },
 
@@ -42,7 +42,7 @@ function staticLoadPlaces() {
                 lat: 1.379198,
                 lng: 103.849562,
             },
-            test:'assets/buster_drone/scene.gltf'
+            test:'assets/asset.gltf'
 
         },
        
