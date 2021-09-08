@@ -68,10 +68,6 @@ function renderPlaces(places) {
        model.setAttribute('scale', '2 2 2');
        model.setAttribute('position','0 40 100');
 
-       model.addEventListener('loaded', () => {
-           window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-       });
-
        scene.appendChild(model);
    });
 }
