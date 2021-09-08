@@ -6,7 +6,7 @@ function staticLoadPlaces() {
                 lat: 1.378043,
                 lng: 103.850071,
             },
-            model:'assets/buster_drone/scene.gltf'
+            model:'assets/asset.gltf'
  
         },
  
@@ -37,7 +37,7 @@ function staticLoadPlaces() {
                  lat: 1.379198,
                  lng: 103.849562,
              },
-             model:'assets/buster_drone/scene.gltf'
+             model:'assets/asset.gltf'
  
          },
         
