@@ -6,35 +6,35 @@ window.location.reload(true) = () => {
 function staticLoadPlaces() {
     return [
         {
-            name:'YCK',
-            location:{
-                lat: 1.372190,
-                lng: 103.848320 
-                },
+            // name:'YCK',
+            // location:{
+            //     lat: 1.372190,
+            //     lng: 103.848320 
+            //     },
 
-            name:'block A',
-            location:{
-                lat: 1.380061558329711,
-                lng: 103.84853482246399
-            },
+            // name:'block A',
+            // location:{
+            //     lat: 1.380061558329711,
+            //     lng: 103.84853482246399
+            // },
 
-            name:'block L',
-            location:{
-                lat:1.3792464031689677,
-                lng:103.84980618953705
-            },
+            // name:'block L',
+            // location:{
+            //     lat:1.3792464031689677,
+            //     lng:103.84980618953705
+            // },
 
             name:'Testing',
             location:{
                 lat:1.3780183070377627,
                 lng:103.84999930858613
-            },
-
-            name:'Home',
-            location:{
-                lat:1.444260,
-                lng:103.797142
             }
+
+            // name:'Home',
+            // location:{
+            //     lat:1.444260,
+            //     lng:103.797142
+            // }
             
         },
     ];
