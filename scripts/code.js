@@ -1,54 +1,57 @@
 window.onload = () => {
+    const button = document.querySelector('button[data-action="change"]');
+    button.innerText = '﹖';
+
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
 
 function staticLoadPlaces() {
-   return [
-       {
-           name: 'Testing',
-           location: {
-               lat: 1.444260,
-               lng: 103.797142,
-           },
-           test:'assets/asset.gltf'
-
-       },
-
+    return [
         {
-            name: 'YCK',
+            name: 'Testing',
             location: {
-                lat: 1.381590,
-                lng: 103.844905,
+                lat: 1.444260,
+                lng: 103.797142,
             },
             test:'assets/asset.gltf'
-
+ 
         },
+ 
+         {
+             name: 'YCK',
+             location: {
+                 lat: 1.381590,
+                 lng: 103.844905,
+             },
+             test:'assets/asset.gltf'
+ 
+         },
+         
+         {
+             name: 'Block_A',
+             location: {
+                 lat: 1.380099,
+                 lng: 103.848593,
+             },
+             test:'assets/asset.gltf'
+ 
+         },
+ 
+ 
+         {
+             name: 'Block_L',
+             location: {
+                 lat: 1.379198,
+                 lng: 103.849562,
+             },
+             test:'assets/asset.gltf'
+ 
+         },
         
-        {
-            name: 'Block_A',
-            location: {
-                lat: 1.380099,
-                lng: 103.848593,
-            },
-            test:'assets/asset.gltf'
-
-        },
-
-
-        {
-            name: 'Block_L',
-            location: {
-                lat: 1.379198,
-                lng: 103.849562,
-            },
-            test:'assets/asset.gltf'
-
-        },
-       
-   ];
-}
-
+    ];
+ }
+ 
 
 var models = [
     {
@@ -64,13 +67,12 @@ var models = [
         info: 'Articuno, Lv. 80, HP 100/100',
     },
     {
-        url: 'assets/dragonite/scene.gltf',
+        url: './assets/dragonite/scene.gltf',
         scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Dragonite, Lv. 99, HP 150/150',
     },
 ];
-
 
 var modelIndex = 0;
 var setModel = function (model, entity) {
@@ -92,29 +94,27 @@ var setModel = function (model, entity) {
     div.innerText = model.info;
 };
 
-
 function renderPlaces(places) {
-   let scene = document.querySelector('a-scene');
+    let scene = document.querySelector('a-scene');
 
-   places.forEach((place) => {
-       let latitude = place.location.lat;
-       let longitude = place.location.lng;
-       let test = place.test
+    places.forEach((place) => {
+        let latitude = place.location.lat;
+        let longitude = place.location.lng;
 
-       let model = document.createElement('a-entity');
-       model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-       setModel(models[modelIndex],model);
-    //    model.setAttribute('gltf-model', `${test}`);
-       model.setAttribute('look-at','[gps-camera]');
-       model.setAttribute('scale', '2 2 2');
-    //    model.setAttribute('position','0 40 100');
-    document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-        var entity = document.querySelector('[gps-entity-place]');
-        modelIndex++;
-        var newIndex = modelIndex % models.length;
-        setModel(models[newIndex], entity);
-    });    
+        let model = document.createElement('a-entity');
+        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
-       scene.appendChild(model);
-   });
+        setModel(models[modelIndex], model);
+
+        model.setAttribute('animation-mixer', '');
+
+        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
+            var entity = document.querySelector('[gps-entity-place]');
+            modelIndex++;
+            var newIndex = modelIndex % models.length;
+            setModel(models[newIndex], entity);
+        });
+
+        scene.appendChild(model);
+    });
 }
