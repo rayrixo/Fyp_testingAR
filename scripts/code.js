@@ -65,7 +65,7 @@ function renderPlaces(places) {
        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
        model.setAttribute('gltf-model', `${test}`);
        model.setAttribute('look-at','[gps-camera]');
-       model.setAttribute('scale', '3 3 3');
+       model.setAttribute('scale', '2 2 2');
        model.setAttribute('position','0 40 100');
 
        model.addEventListener('loaded', () => {
