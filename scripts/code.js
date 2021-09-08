@@ -8,8 +8,8 @@ function staticLoadPlaces() {
        {
            name: 'Testing',
            location: {
-               lat: 1.444260,
-               lng: 103.797142,
+               lat: 1.378043,
+               lng: 103.850071,
            },
            test:'assets/asset.gltf'
 
@@ -54,22 +54,20 @@ function staticLoadPlaces() {
 
 
 function renderPlaces(places) {
-    let scene = document.querySelector('a-scene');
+   let scene = document.querySelector('a-scene');
 
-    places.forEach((place) => {
-        let latitude = place.location.lat;
-        let longitude = place.location.lng;
+   places.forEach((place) => {
+       let latitude = place.location.lat;
+       let longitude = place.location.lng;
+       let test = place.test
 
-        let model = document.createElement('a-entity');
-        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        model.setAttribute('gltf-model', `${test}`);
-        model.setAttribute('rotation', '0 180 0');
-        model.setAttribute('scale', '5 5 5');
+       let model = document.createElement('a-entity');
+       model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+       model.setAttribute('gltf-model', `${test}`);
+       model.setAttribute('look-at','[gps-camera]');
+       model.setAttribute('scale', '2 2 2');
+    //    model.setAttribute('position','0 40 100');
 
-        model.addEventListener('loaded', () => {
-            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-        });
-
-        scene.appendChild(model);
-    });
+       scene.appendChild(model);
+   });
 }
