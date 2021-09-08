@@ -11,7 +11,7 @@ function staticLoadPlaces() {
                lat: 1.378043,
                lng: 103.850071,
            },
-           model:'assets/buster_drone/scene.gltf'
+           test:'assets/buster_drone/scene.gltf'
 
        },
 
@@ -21,7 +21,7 @@ function staticLoadPlaces() {
                 lat: 1.381590,
                 lng: 103.844905,
             },
-            model:'assets/asset.gltf'
+            test:'assets/asset.gltf'
 
         },
         
@@ -31,7 +31,7 @@ function staticLoadPlaces() {
                 lat: 1.380099,
                 lng: 103.848593,
             },
-            model:'assets/asset.gltf'
+            test:'assets/asset.gltf'
 
         },
 
@@ -42,7 +42,7 @@ function staticLoadPlaces() {
                 lat: 1.379198,
                 lng: 103.849562,
             },
-            model:'assets/buster_drone/scene.gltf'
+            test:'assets/buster_drone/scene.gltf'
 
         },
        
@@ -59,11 +59,11 @@ function renderPlaces(places) {
    places.forEach((place) => {
        let latitude = place.location.lat;
        let longitude = place.location.lng;
-       let model = place.model
+       let test = place.test
 
        let model = document.createElement('a-entity');
        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-       model.setAttribute('gltf-model', `${model}`);
+       model.setAttribute('gltf-model', `${test}`);
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('scale', '4 4 4');
        model.setAttribute('position','0 20 100');
