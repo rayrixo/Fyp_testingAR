@@ -13,8 +13,8 @@ function staticLoadPlaces() {
        {
            name: 'Testing',
            location: {
-               lat: 1.378043,
-               lng: 103.850071,
+               lat: 1.444260,
+               lng: 103.797142,
            },
            test:'assets/asset.gltf'
 
