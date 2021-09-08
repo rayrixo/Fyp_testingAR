@@ -27,7 +27,7 @@ function renderPlaces(places) {
        model.setAttribute('gltf-model', 'assets/asset.gltf');
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('scale', '5 5 5');
-       model.setAttribute('position','0 -0.05 -15');
+       model.setAttribute('position','0 10 100');
 
        model.addEventListener('loaded', () => {
            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
