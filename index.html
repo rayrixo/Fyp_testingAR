@@ -92,6 +92,11 @@
         vr-mode-ui="enabled: false"
         embedded
         arjs='sourceType: webcam; debugUIEnabled: true;'>
+
+        <a-marker markhandler emitevents = "true" cursor = "rayOrigin: mouse" id="animated-marker" type = 'barcode' value='6'>
+            
+        </a-marker>
+
         <a-camera gps-camera = "maxDistance: 1; " rotation-reader>
         </a-camera>
 
