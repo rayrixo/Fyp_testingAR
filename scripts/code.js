@@ -1,6 +1,10 @@
 window.onload = () => {
     let places = staticLoadPlaces();
     renderPlaces(places);
+    document.querySelector(".say-hi-button").addEventListener("click",function(){
+        alert("Hi There!");
+    });
+
 };
 
 function staticLoadPlaces() {
