@@ -99,6 +99,7 @@ function renderPlaces(places) {
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+        model.setAttribute('look-at','[gps-camera]')
 
         setModel(models[modelIndex], model);
 
