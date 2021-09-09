@@ -72,11 +72,9 @@ function renderPlaces(places) {
        model.setAttribute('gltf-model', `${test}`);
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('scale', '2 2 2');
-       model.onclick = function(event){
-
-        alert("Hello!");
-    
-    }
+       model.addEventListener('click',function(event,target){
+           alert("Hello");
+       });
     //    model.setAttribute('position','0 40 100');
 
        scene.appendChild(model);
