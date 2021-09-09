@@ -10,12 +10,12 @@
     z-index: 10;
   }
 
-  .say-hi-button {
-    padding: 0.25em;
-    border-radius: 4px;
-    border: none;
-    background: white;
-    color: black;
-    width: 4em;
-    height: 2em;
+.say-hi-button {
+  padding: 0.25em;
+  border-radius: 4px;
+  border: none;
+  background: white;
+  color: black;
+  width: 4em;
+  height: 2em;
   }
