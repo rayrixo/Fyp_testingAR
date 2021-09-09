@@ -11,8 +11,8 @@ function staticLoadPlaces() {
         {
             name: 'Testing',
             location: {
-                lat: 1.378043,
-                lng: 103.850071,
+                lat: 1.445737,
+                lng: 103.795076,
             }
  
         },
