@@ -7,11 +7,7 @@ window.onload = () => {
 
 };
 
-function sayHello(){
 
-    alert("Hello!");
-
-}
 
 function staticLoadPlaces() {
    return [
@@ -76,7 +72,11 @@ function renderPlaces(places) {
        model.setAttribute('gltf-model', `${test}`);
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('scale', '2 2 2');
-       model.onclick(sayHello());
+       model.onclick = function(event){
+
+        alert("Hello!");
+    
+    }
     //    model.setAttribute('position','0 40 100');
 
        scene.appendChild(model);
