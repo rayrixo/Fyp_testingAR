@@ -60,7 +60,7 @@ function staticLoadPlaces() {
 
 
 function renderPlaces(places) {
-   let scene = document.querySelector('a-marker');
+   let scene = document.querySelector('Testing');
 
    places.forEach((place) => {
        let latitude = place.location.lat;
@@ -72,7 +72,8 @@ function renderPlaces(places) {
        model.setAttribute('gltf-model', `${test}`);
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('scale', '2 2 2');
-       model.addEventListener('click',function(event,target){
+       model.setAttribute('class','clickable')
+       model.addEventListener("click",function(){
            alert("Hello");
        });
     //    model.setAttribute('position','0 40 100');
