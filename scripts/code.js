@@ -2,11 +2,12 @@ window.onload = () => {
     let places = staticLoadPlaces();
     renderPlaces(places);
 
+    const button = document.querySelector("button");
+    button.innerText = 'Hello';
+
 };
 
-document.querySelector("button").addEventListener("click", (e)=>{
-	alert("HEllo")
-})
+
 
 function staticLoadPlaces() {
    return [
@@ -73,6 +74,9 @@ function renderPlaces(places) {
        model.setAttribute('scale', '2 2 2');
        model.setAttribute('class','clickable');
     //    model.setAttribute('position','0 40 100');
+    document.querySelector("button").addEventListener("click", (e)=>{
+        console.log("HIDE OBJECTS");
+    });
 
        scene.appendChild(model);
    });
