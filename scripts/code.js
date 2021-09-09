@@ -5,7 +5,7 @@ window.onload = () => {
 };
 
 document.querySelector("button").addEventListener("click", (e)=>{
-	console.log("hello")
+	alert("HEllo")
 })
 
 function staticLoadPlaces() {
