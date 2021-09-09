@@ -73,9 +73,9 @@ function renderPlaces(places) {
        model.setAttribute('look-at','[gps-camera]');
        model.setAttribute('scale', '2 2 2');
        model.setAttribute('class','clickable')
-       model.addEventListener("click",function(){
-           alert("Hello");
-       });
+    //    model.addEventListener("click",function(){
+    //        alert("Hello");
+    //    });
     //    model.setAttribute('position','0 40 100');
 
        scene.appendChild(model);
