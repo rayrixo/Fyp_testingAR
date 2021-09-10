@@ -7,10 +7,18 @@ window.onload = () => {
     
     
     
-    
  
 };
 
+function getLocation(){
+    navigator.geolocation.getCurrentPosition(showposition);
+}
+
+function showposition(currentPosition){
+    userlat = currentPosition.coords.latitude;
+    userlng = currentPosition.coords.longitude;
+    console.log(userlat);
+}
 
 function staticLoadPlaces() {
     return [
