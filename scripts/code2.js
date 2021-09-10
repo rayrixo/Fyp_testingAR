@@ -105,10 +105,10 @@ window.onload = () => {
                     const longitude = place.location.lng;
 
                     // add place icon
-                    const icon = document.createElement('a-entity');
+                    const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
-                    icon.setAttribute('gltf-model', '../assets/map-marker.png');
+                    icon.setAttribute('gltf-model', 'assets/map-marker.png');
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
                     icon.setAttribute('scale', '20, 20');
