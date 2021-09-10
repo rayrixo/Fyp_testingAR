@@ -4,8 +4,12 @@ window.onload = () => {
 
     let places = staticLoadPlaces();
     renderPlaces(places);
+    
+    currentLocation  = navigator.geolocation.getCurrentPosition(showPosition);
+    console.log(currentLocation);
  
 };
+
 
 function staticLoadPlaces() {
     return [
@@ -59,6 +63,7 @@ function staticLoadPlaces() {
  }
  
 
+
 var models = [
     {
         url: './assets/magnemite/scene.gltf',
@@ -103,7 +108,9 @@ var setModel = function (model, entity) {
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
 
+
     places.forEach((place) => {
+
         let latitude = place.location.lat;
         let longitude = place.location.lng;
 
