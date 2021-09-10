@@ -129,7 +129,6 @@ function renderPlaces(places) {
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         // model.setAttribute('gltf-model', `${body}`);
         model.setAttribute('look-at','[gps-camera]');
-        model.setAttribute('visible','false');
         
         
 
@@ -145,5 +144,8 @@ function renderPlaces(places) {
         });
 
         scene.appendChild(model);
+
+        let item = document.querySelector('a-entity');
+        item.setAttribute('visible',false);
     });
 }
