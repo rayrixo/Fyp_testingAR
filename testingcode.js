@@ -10,14 +10,14 @@ window.onload = () => {
  
 };
 
-// function getLocation(){
-//     navigator.geolocation.getCurrentPosition(showposition);
-// }
+function getLocation(){
+    navigator.geolocation.getCurrentPosition(showposition);
+}
 
-// function showposition(currentPosition){
-//     userlat = currentPosition.coords.latitude;
-//     userlng = currentPosition.coords.longitude;
-// }
+function showposition(currentPosition){
+    userlat = currentPosition.coords.latitude;
+    userlng = currentPosition.coords.longitude;
+}
 
 function staticLoadPlaces() {
     return [
