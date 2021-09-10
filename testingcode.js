@@ -123,7 +123,7 @@ function renderPlaces(places) {
         let longitude = place.location.lng;
 
         let camera = document.querySelector("a-camera");
-        camera.setAttribute('gps-camera','maxDistance: 10;');
+        camera.setAttribute('gps-camera','maxDistance: 1;');
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
@@ -144,8 +144,5 @@ function renderPlaces(places) {
         });
 
         scene.appendChild(model);
-
-        let item = document.querySelector('a-entity');
-        item.setAttribute('visible',false);
     });
 }
