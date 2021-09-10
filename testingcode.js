@@ -122,8 +122,6 @@ function renderPlaces(places) {
         let latitude = place.location.lat;
         let longitude = place.location.lng;
 
-        let camera = document.querySelector("a-camera");
-        camera.setAttribute('gps-camera','maxDistance: 1;');
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
