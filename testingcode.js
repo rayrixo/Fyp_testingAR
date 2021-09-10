@@ -17,7 +17,6 @@ function getLocation(){
 function showposition(currentPosition){
     userlat = currentPosition.coords.latitude;
     userlng = currentPosition.coords.longitude;
-    console.log(userlat);
 }
 
 function staticLoadPlaces() {
