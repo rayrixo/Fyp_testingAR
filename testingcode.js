@@ -133,6 +133,9 @@ function renderPlaces(places) {
         if (model.getAttribute('distance')>40){
             model.setAttribute('visible','false');
         }
+        else{
+            model.setAttribute('visible','true');
+        }
         
 
         setModel(models[modelIndex], model);
