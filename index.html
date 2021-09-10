@@ -16,9 +16,25 @@
         </script>
         <script src="./testingcode.js"></script>
         <link rel="stylesheet" type="text/css" href="./scripts/style.css"/>
+        <script>
+            var x = document.getElementById("demo")
+            function getLocation(){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+
+            function showPosition(position){
+                x.innerHTML = "Latitude" + position.coords.latitude + "<br> Longtitude" + position.coords.longitude;
+            }
+        </script>
+
+
     </head>
     
     <body style='margin: 0; overflow: hidden;'>
+        <div id="demo">
+
+        </div>
+
         <div class="centered instructions"></div>
         <a-scene 
             vr-mode-ui='enabled: false' 
