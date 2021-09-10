@@ -129,7 +129,7 @@ function renderPlaces(places) {
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         // model.setAttribute('gltf-model', `${body}`);
         model.setAttribute('look-at','[gps-camera]');
-        model.setAttribute('visible',false);
+        model.setAttribute('visible','false');
         
         
 
