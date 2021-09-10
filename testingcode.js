@@ -118,7 +118,7 @@ function renderPlaces(places) {
 
 
     places.forEach((place) => {
-
+        distance = 0;
         let latitude = place.location.lat;
         let longitude = place.location.lng;
 
@@ -129,11 +129,8 @@ function renderPlaces(places) {
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         // model.setAttribute('gltf-model', `${body}`);
         model.setAttribute('look-at','[gps-camera]');
-        if (model.getAttribute('distance')>40){
-            model.setAttribute('visible',false);
-        }else{
-            model.setAttribute('visible',true);
-        }
+        model.setAttribute('visible',false);
+        
         
 
         setModel(models[modelIndex], model);
