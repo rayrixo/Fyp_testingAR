@@ -24,8 +24,8 @@ function staticLoadPlaces() {
         {
             name: 'Testing',
             location: {
-                lat: 1.378043,
-                lng: 103.850071,
+                lat: 1.445723, //1.378043
+                lng: 103.795070,//103.850071
             },
 
             body:'./assets/magnemite/scene.gltf'
