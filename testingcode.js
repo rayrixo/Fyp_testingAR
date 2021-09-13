@@ -32,6 +32,15 @@ function staticLoadPlaces() {
 
  
         },
+
+        {
+            name:"Test2",
+            location:{
+                lat:1.445203,
+                lng:103.794357
+            },
+            body:'./assets/magnemite/scene.gltf'
+        },
  
          {
              name: 'YCK',
