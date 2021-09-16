@@ -4,91 +4,69 @@ const loadPlaces = function(coords) {
 
     const PLACES = [
         {
-            name: 'Testing',
+            name: "Testing1",
             location: {
-                lat: 1.378043,
-                lng: 103.850071,
-            },
+                lat: 1.445721, // add here latitude if using static data
+                lng: 103.795081, // add here longitude if using static data
 
-            body:'./assets/magnemite/scene.gltf'
-
- 
+            }
         },
- 
-         {
-             name: 'YCK',
-             location: {
-                 lat: 1.381590,
-                 lng: 103.844905,
-             },
 
-             body: './assets/articuno/scene.gltf'
- 
-         },
-         
-         {
-             name: 'Block_A',
-             location: {
-                 lat: 1.380099,
-                 lng: 103.848593,
-             },
+        {
+            name: "Testing2",
+            location:{
+                lat:1.444881,
+                lng:103.793885,
+            }
+        },
 
-             body:'./assets/dragonite/scene.gltf'
- 
-         },
- 
- 
-         {
-             name: 'Block_L',
-             location: {
-                 lat: 1.379198,
-                 lng: 103.849562,
-             },
-
-             body:'./assets/dragonite/scene.gltf'
- 
-         },
-        
+        {
+            name: "Evergreen Primary school",
+            location:{
+                lat:1.444398,
+                lng:103.794926,
+            }
+        },
     ];
 
-    // if (method === 'api') {
-    //     return loadPlaceFromAPIs(coords);
-    // }
+    if (method === 'api') {
+        return loadPlaceFromAPIs(coords);
+    }
 
     return Promise.resolve(PLACES);
 };
 
 // getting places from REST APIs
-// function loadPlaceFromAPIs(position) {
-//     const params = {
-//         radius: 300,    // search places not farther than this value (in meters)
-//         clientId: 'CRDMPAGPE4KCZOMKKCLKKSJOKUKJZVE54LUROL2GLDS3UMTA',
-//         clientSecret: 'TCWSXDU33J30GFTTPDRVL4SXMGMT3ON0ZWZVXWQPPINDMMWD',
-//         version: '20300101',    // foursquare versioning, required but unuseful for this demo
-//     };
+function loadPlaceFromAPIs(position) {
+    const params = {
+        radius: 300,    // search places not farther than this value (in meters)
+        clientId: 'CRDMPAGPE4KCZOMKKCLKKSJOKUKJZVE54LUROL2GLDS3UMTA',
+        clientSecret: 'TCWSXDU33J30GFTTPDRVL4SXMGMT3ON0ZWZVXWQPPINDMMWD',
+        version: '20300101',    // foursquare versioning, required but unuseful for this demo
+    };
 
     // CORS Proxy to avoid CORS problems
-    // const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+    const corsProxy = 'https://cors-anywhere.herokuapp.com/';
 
-//     // Foursquare API
-//     const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
-//         &ll=${position.latitude},${position.longitude}
-//         &radius=${params.radius}
-//         &client_id=${params.clientId}
-//         &client_secret=${params.clientSecret}
-//         &limit=15
-//         &v=${params.version}`;
-//     return fetch(endpoint)
-//         .then((res) => {
-//             return res.json()
-//                 .then((resp) => {
-//                     return resp.response.venues;
-//                 })
-//         })
-//         .catch((err) => {
-//             console.error('Error with places API', err);
-//         })
-// };
+    // Foursquare API
+    const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
+        &ll=${position.latitude},${position.longitude}
+        &radius=${params.radius}
+        &client_id=${params.clientId}
+        &client_secret=${params.clientSecret}
+        &limit=15
+        &v=${params.version}`;
+    return fetch(endpoint)
+        .then((res) => {
+            return res.json()
+                .then((resp) => {
+                    return resp.response.venues;
+                })
+        })
+        .catch((err) => {
+            console.error('Error with places API', err);
+        })
+};
 
 
 window.onload = () => {
@@ -105,13 +83,13 @@ window.onload = () => {
                     const longitude = place.location.lng;
 
                     // add place icon
-                    const icon = document.createElement('a-entity');
+                    const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
-                    icon.setAttribute('gltf-model', 'assets/asset.gltf');
+                    icon.setAttribute('src', './assets/map-marker.png');
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
-                    icon.setAttribute('scale', '5  5  5');
+                    icon.setAttribute('scale', '20, 20');
 
                     icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
 
