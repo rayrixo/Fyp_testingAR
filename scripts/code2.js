@@ -27,6 +27,14 @@ const loadPlaces = function(coords) {
                 lng:103.799197,
             }
         },
+
+        {
+            name: "YCK",
+            location:{
+                lat:1.378075,
+                lng:103.850044
+            }
+        },
     ];
 
     // if (method === 'api') {
