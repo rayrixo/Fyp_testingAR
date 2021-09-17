@@ -21,10 +21,10 @@ const loadPlaces = function(coords) {
         },
 
         {
-            name: "Evergreen Primary school",
+            name: "Block 728",
             location:{
-                lat:1.444398,
-                lng:103.794926,
+                lat:1.442829,
+                lng:103.799197,
             }
         },
     ];
@@ -111,7 +111,7 @@ window.onload = () => {
 
                             setTimeout(() => {
                                 container.parentElement.removeChild(container);
-                            }, 1500);
+                            }, 2500);
                         }
                     };
 
