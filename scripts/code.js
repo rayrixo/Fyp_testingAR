@@ -91,8 +91,8 @@ function loadPlaceFromAPIs(position) {
 
 window.onload = () => {
     const scene = document.querySelector('a-scene');
-    const distanceMSG = document.querySelector('gps-entity-place').getAttribute('distance');
-    console.log(distanceMSG);
+    const camera = document.querySelector('a-camera');
+    camera.setAttribute('gps-camera','minDistance: 5');
 
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
