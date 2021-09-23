@@ -91,7 +91,7 @@ function loadPlaceFromAPIs(position) {
 
 window.onload = () => {
     const scene = document.querySelector('a-scene');
-    const distanceMSG = document.querySelector('[gps-entity-place]').getAttribute('distance');
+    const distanceMSG = document.querySelector('gps-entity-place').getAttribute('distance');
     console.log(distanceMSG);
 
     // first get current user location
