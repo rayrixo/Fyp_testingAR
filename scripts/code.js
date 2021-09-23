@@ -15,6 +15,14 @@ const loadPlaces = function(coords) {
 
             }
         },
+        {
+            name:"Block 751",
+            location:{
+                lat:1.444860,
+                lng:103.793897,
+
+            }
+        },
 
         {
             name: "Block A",
