@@ -105,7 +105,7 @@ window.onload = () => {
                     // add place icon
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
-                    distaneMSG = document.querySelector('gps-entity-place').getAttribute('distance');
+                    distaneMSG = document.querySelector('a-image').getAttribute('distance');
                     console.log(distanceMSG);
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
