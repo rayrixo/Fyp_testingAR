@@ -91,8 +91,6 @@ function loadPlaceFromAPIs(position) {
 
 window.onload = () => {
     const scene = document.querySelector('a-scene');
-    const camera = document.querySelector('a-camera');
-    camera.setAttribute('gps-camera','minDistance: 5');
 
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
@@ -107,6 +105,8 @@ window.onload = () => {
                     // add place icon
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    distaneMSG = document.querySelector('gps-entity-place').getAttribute('distance');
+                    console.log(distanceMSG);
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
 
