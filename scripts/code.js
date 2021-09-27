@@ -108,7 +108,7 @@ window.onload = () => {
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
                     distancemsg = icon.getAttribute('distance');
-                    if(distancemsg<15){
+                    if(distancemsg<9){
                         icon.setAttribute('visible', false);
                     }else{
                          icon.setAttribute('visible',true);
