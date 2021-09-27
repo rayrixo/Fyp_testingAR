@@ -107,8 +107,8 @@ window.onload = () => {
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
-                    distancemsg = icon.getAttribute('distance');
-                    if(distancemsg<10){
+    
+                    if(icon.getAttribute('distance')<50){
                         icon.setAttribute('visible', false);
                     };
 
