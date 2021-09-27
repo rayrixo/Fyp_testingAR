@@ -112,7 +112,7 @@ window.onload = () => {
                         icon.setAttribute('visible', false);
                     }else{
                         icon.setAttribute('visible',true);
-                    };
+                    }
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
                     icon.setAttribute('scale', '20, 20');
