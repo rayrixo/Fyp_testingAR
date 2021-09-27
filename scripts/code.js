@@ -139,9 +139,9 @@ window.onload = () => {
                     
                     scene.appendChild(icon);
                     
-                    if(icon.getAttribute('distance')<50){
-                        icon.setAttribute('visible', false);
-                    };
+                    // if(icon.getAttribute('distance')<50){
+                    //     icon.setAttribute('visible', false);
+                    // };
                 });
 
             })
