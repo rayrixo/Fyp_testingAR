@@ -108,10 +108,8 @@ window.onload = () => {
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
                     distancemsg = icon.getAttribute('distance');
-                    if(distancemsg<9){
+                    if(distancemsg<10){
                         icon.setAttribute('visible', false);
-                    }else{
-                         icon.setAttribute('visible',true);
                     };
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
