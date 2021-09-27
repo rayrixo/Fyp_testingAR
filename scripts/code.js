@@ -107,10 +107,6 @@ window.onload = () => {
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
-    
-                    if(icon.getAttribute('distance')<50){
-                        icon.setAttribute('visible', false);
-                    };
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
                     icon.setAttribute('scale', '20, 20');
@@ -142,6 +138,10 @@ window.onload = () => {
                     icon.addEventListener('click', clickListener);
                     
                     scene.appendChild(icon);
+                    
+                    if(icon.getAttribute('distance')<50){
+                        icon.setAttribute('visible', false);
+                    };
                 });
 
             })
