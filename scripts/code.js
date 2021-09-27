@@ -105,10 +105,10 @@ window.onload = () => {
                     // add place icon
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
-                    distaneMSG = document.querySelector('a-image').getAttribute('distance');
-                    console.log(distanceMSG);
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
+                    distancemsg = icon.getAttribute('distance');
+                    console.log(distancemsg);
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
                     icon.setAttribute('scale', '20, 20');
@@ -141,6 +141,7 @@ window.onload = () => {
                     
                     scene.appendChild(icon);
                 });
+
             })
     },
         (err) => console.error('Error in retrieving position', err),
