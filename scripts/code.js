@@ -108,6 +108,7 @@ window.onload = () => {
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'http://www.example.com/');
                     text.setAttribute('scale', '40 40 40');
+                    text.setAttribute('src','./assets/map-marker.png');
                     
 
                     text.addEventListener('loaded', () => {
