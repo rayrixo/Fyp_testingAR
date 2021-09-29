@@ -136,7 +136,7 @@ window.onload = () => {
                     //     }
                     // };
 
-                    icon.addEventListener('click', clickListener);
+                    // icon.addEventListener('click', clickListener);
                     
                     scene.appendChild(icon);
                     
