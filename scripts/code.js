@@ -142,7 +142,7 @@ window.onload = () => {
                     // };
 
                     // icon.addEventListener('click', clickListener);
-                    
+                    scene.appendChild(link);
                     scene.appendChild(icon);
                 });
             })
