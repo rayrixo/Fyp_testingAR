@@ -106,10 +106,13 @@ window.onload = () => {
 
                     // add place icon
                     const icon = document.createElement('a-image');
+                    const link = document.createElement('a-link');
+                    link.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    link.setAttribute('href','google.com');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
-                    icon.setAttribute('href','google.com');
+                    // icon.setAttribute('href','google.com');
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
                     icon.setAttribute('scale', '40, 40');
