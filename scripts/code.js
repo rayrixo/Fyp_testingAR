@@ -15,14 +15,6 @@ const loadPlaces = function(coords) {
 
             }
         },
-        {
-            name:"Block 751",
-            location:{
-                lat:1.444860,
-                lng:103.793897,
-
-            }
-        },
 
         {
             name: "Block A",
@@ -95,27 +87,50 @@ window.onload = () => {
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
 
-        // than use it to load from remote APIs some places nearby
+        // then use it to load from remote APIs some places nearby
         loadPlaces(position.coords)
             .then((places) => {
                 places.forEach((place) => {
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
 
-                    // add place name
-                    const text = document.createElement('a-link');
-                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'http://www.example.com/');
-                    text.setAttribute('scale', '40 40 40');
-                    text.setAttribute('src','./assets/map-marker.png');
+                    // add place icon
+                    const icon = document.createElement('a-image');
+                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    icon.setAttribute('name', place.name);
+                    icon.setAttribute('src', './assets/map-marker.png');
+                    icon.setAttribute('href','google.com');
+
+                    // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
+                    icon.setAttribute('scale', '40, 40');
+
+                    icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
+
+                    // const clickListener = function(ev) {
+                    //     ev.stopPropagation();
+                    //     ev.preventDefault();
+
+                    //     const name = ev.target.getAttribute('name');
+
+                    //     const el = ev.detail.intersection && ev.detail.intersection.object.el;
+
+                    //     if (el && el === ev.target) {
+                    //         const label = document.createElement('span');
+                    //         const container = document.createElement('div');
+                    //         container.setAttribute('id', 'place-label');
+                    //         label.innerText = name;
+                    //         container.appendChild(label);
+                    //         document.body.appendChild(container);
+
+                    //         setTimeout(() => {
+                    //             container.parentElement.removeChild(container);
+                    //         }, 2500);
+                    //     }
+                    // };
+
+                    // icon.addEventListener('click', clickListener);
                     
-
-                    text.addEventListener('loaded', () => {
-                        window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-                    });
-
-                    scene.appendChild(text);
+                    scene.appendChild(icon);
                 });
             })
     },
@@ -123,7 +138,7 @@ window.onload = () => {
         {
             enableHighAccuracy: true,
             maximumAge: 0,
-            timeout: 27000,
+            timeout: 20000,
         }
     );
 };
@@ -228,5 +243,3 @@ function getLocationUpdate(){
         alert("Browser does not support geolocation!")
     }
 }
-
-
