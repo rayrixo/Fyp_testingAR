@@ -1,3 +1,5 @@
+const { isContext } = require("vm");
+
 var watchID,geoLoc,target,origin_lat,origin_lng;
 var flag = false; 
 target = {latitude : 1.377587,longitude: 103.850036};
@@ -59,7 +61,7 @@ const loadPlaces = function(coords) {
 // getting places from REST APIs
 function loadPlaceFromAPIs(position) {
     const params = {
-        radius: 300,    // search places not farther than this value (in meters)
+        radius: 100,    // search places not farther than this value (in meters)
         clientId: 'CRDMPAGPE4KCZOMKKCLKKSJOKUKJZVE54LUROL2GLDS3UMTA',
         clientSecret: 'TCWSXDU33J30GFTTPDRVL4SXMGMT3ON0ZWZVXWQPPINDMMWD',
         version: '20300101',    // foursquare versioning, required but unuseful for this demo
@@ -107,35 +109,36 @@ window.onload = () => {
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
+                    icon.setAttribute('href','google.com');
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
                     icon.setAttribute('scale', '40, 40');
 
                     icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
 
-                    const clickListener = function(ev) {
-                        ev.stopPropagation();
-                        ev.preventDefault();
+                    // const clickListener = function(ev) {
+                    //     ev.stopPropagation();
+                    //     ev.preventDefault();
 
-                        const name = ev.target.getAttribute('name');
+                    //     const name = ev.target.getAttribute('name');
 
-                        const el = ev.detail.intersection && ev.detail.intersection.object.el;
+                    //     const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
-                        if (el && el === ev.target) {
-                            const label = document.createElement('span');
-                            const container = document.createElement('div');
-                            container.setAttribute('id', 'place-label');
-                            label.innerText = name;
-                            container.appendChild(label);
-                            document.body.appendChild(container);
+                    //     if (el && el === ev.target) {
+                    //         const label = document.createElement('span');
+                    //         const container = document.createElement('div');
+                    //         container.setAttribute('id', 'place-label');
+                    //         label.innerText = name;
+                    //         container.appendChild(label);
+                    //         document.body.appendChild(container);
 
-                            setTimeout(() => {
-                                container.parentElement.removeChild(container);
-                            }, 2500);
-                        }
-                    };
+                    //         setTimeout(() => {
+                    //             container.parentElement.removeChild(container);
+                    //         }, 2500);
+                    //     }
+                    // };
 
-                    icon.addEventListener('click', clickListener);
+                    // icon.addEventListener('click', clickListener);
                     
                     scene.appendChild(icon);
                 });
