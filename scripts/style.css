@@ -1,4 +1,4 @@
-span {
+/* span {
   margin-right: 0.5em;
 }
 
@@ -48,10 +48,10 @@ div.debug {
   font-size: 1.5em;
   border-radius: 5px;
 }
+ */
 
 
-
-/* span {
+span {
   margin-right: 1em;
 }
 
@@ -100,4 +100,4 @@ div.debug {
   background-color: white;
   font-size: 1.5em;
   border-radius: 10px;
-} */
+}
