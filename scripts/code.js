@@ -10,9 +10,17 @@ const loadPlaces = function(coords) {
         {
             name: "House",
             location: {
-                lat: 1.445721, // add here latitude if using static data
-                lng: 103.795081, // add here longitude if using static data
+                lat: 1.445771, // add here latitude if using static data
+                lng: 103.794990, // add here longitude if using static data
 
+            }
+        },
+
+        {
+            name:"Block 748",
+            location:{
+                lat:1.445031,
+                lng:103.795580,
             }
         },
 
