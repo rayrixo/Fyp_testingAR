@@ -130,7 +130,7 @@ window.onload = () => {
                     //     }
                     // };
                     icon.addEventListener('click',function(){
-                        window.location.href = "https://google.com";
+                        window.location.href = "https://rayrixo.github.io/Fyp_testingAR/testin.html";
                     });
                   
                     scene.appendChild(icon);
