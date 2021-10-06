@@ -8,35 +8,35 @@ const loadPlaces = function(coords) {
 
     const PLACES = [
         {
-            name: "House",
+            name: "Chinese Heritage Center",
             location: {
-                lat: 1.445721, // add here latitude if using static data
-                lng: 103.795081, // add here longitude if using static data
+                lat: 1.283421, // add here latitude if using static data
+                lng: 103.844455, // add here longitude if using static data
 
             }
         },
 
         {
-            name: "Block A",
+            name: "Sri Maraimman Temple",
             location:{
-                lat:1.379992,
-                lng:103.848594,
+                lat:1.282644,
+                lng:103.845227,
             }
         },
 
         {
-            name: "Block L",
+            name: "Masjid Jamae",
             location:{
-                lat:1.379155,
-                lng:103.849828,
+                lat:1.283190,
+                lng:103.845329,
             }
         },
 
         {
-            name: "YCK",
+            name: "Tong Heng",
             location:{
-                lat:1.381504,
-                lng:103.844978
+                lat:1.281370,
+                lng:103.844937,
             }
         },
     ];
