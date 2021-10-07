@@ -34,7 +34,8 @@ const loadPlaces = function(coords) {
             location:{
                 lat:1.379992,
                 lng:103.848594,
-            }
+            },
+            text: "Hello Block 751" 
         },
 
         {
@@ -42,7 +43,8 @@ const loadPlaces = function(coords) {
             location:{
                 lat:1.379155,
                 lng:103.849828,
-            }
+            },
+            text: "Hello Block 751" 
         },
 
         {
@@ -50,7 +52,8 @@ const loadPlaces = function(coords) {
             location:{
                 lat:1.381504,
                 lng:103.844978
-            }
+            },
+            text: "Hello Block 751" 
         },
     ];
 
