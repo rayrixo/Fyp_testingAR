@@ -13,7 +13,18 @@ const loadPlaces = function(coords) {
                 lat: 1.445721, // add here latitude if using static data
                 lng: 103.795081, // add here longitude if using static data
 
-            }
+            },
+
+            text:"Hello House"
+        },
+
+        {
+            name: "Block 751",
+            location:{
+                lat:1.444886,
+                lng:103.793890,
+            },
+            text: "Hello Block 751" 
         },
 
         {
@@ -111,23 +122,23 @@ window.onload = () => {
                         ev.stopPropagation();
                         ev.preventDefault();
 
-                        const name = ev.target.getAttribute('name');
 
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
                         if (el && el === ev.target) {
-                            const label = document.createElement('a-text');
-                            label.setAttribute('value','This will always look at you');
-                            label.setAttribute('look-at', `[gps-camera]`);
-                            // label.innerText = name;
-                            document.body.appendChild(label);
-                            // document.body.appendChild(container);
+                            const label = document.createElement('span');
+                            const container = document.createElement('div');
+                            container.setAttribute('id', 'place-label');
+                            label.innerText = text;
+                            container.appendChild(label);
+                            document.body.appendChild(container);
 
                             setTimeout(() => {
-                                label.parentElement.removeChild(label);
-                            }, 2500);
+                                container.parentElement.removeChild(container);
+                            }, 1500);
                         }
                     };
+
 
                     icon.addEventListener('click',clickListener);
 
