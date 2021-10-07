@@ -1,3 +1,5 @@
+const { text } = require("stream/consumers");
+
 var watchID,geoLoc,target,origin_lat,origin_lng;
 var flag = false; 
 target = {latitude : 1.377587,longitude: 103.850036};
@@ -122,7 +124,7 @@ window.onload = () => {
                         ev.stopPropagation();
                         ev.preventDefault();
 
-
+                        const text = ev.target.getAttribute('text');
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
                         if (el && el === ev.target) {
