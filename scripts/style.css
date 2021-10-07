@@ -132,3 +132,16 @@ div.debug {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;} 
+
+
+.card-img-top{
+  float: left;
+  width:  613px;
+  height: 400px;
+  object-fit: cover;
+}
+
+img {
+  width:  900px;
+  height: 600px;
+}
