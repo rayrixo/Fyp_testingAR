@@ -107,31 +107,32 @@ window.onload = () => {
 
                     icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
 
-                    // const clickListener = function(ev) {
-                    //     ev.stopPropagation();
-                    //     ev.preventDefault();
+                    const clickListener = function(ev) {
+                        ev.stopPropagation();
+                        ev.preventDefault();
 
-                    //     const name = ev.target.getAttribute('name');
+                        const name = ev.target.getAttribute('name');
 
-                    //     const el = ev.detail.intersection && ev.detail.intersection.object.el;
+                        const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
-                    //     if (el && el === ev.target) {
-                    //         const label = document.createElement('span');
-                    //         const container = document.createElement('div');
-                    //         container.setAttribute('id', 'place-label');
-                    //         label.innerText = name;
-                    //         container.appendChild(label);
-                    //         document.body.appendChild(container);
+                        if (el && el === ev.target) {
+                            const label = document.createElement('a-text');
+                            label.setAttribute('value','This will always look at you');
+                            label.setAttribute('look-at', `[gps-camera]`);
+                            // label.innerText = name;
+                            document.body.appendChild(label);
+                            // document.body.appendChild(container);
 
-                    //         setTimeout(() => {
-                    //             container.parentElement.removeChild(container);
-                    //         }, 2500);
-                    //         window.location.href = "https://google.com";
-                    //     }
-                    // };
-                    icon.addEventListener('click',function(){
-                        window.location.href = "https://rayrixo.github.io/Fyp_testingAR/testin.html";
-                    });
+                            setTimeout(() => {
+                                label.parentElement.removeChild(label);
+                            }, 2500);
+                        }
+                    };
+
+
+                    // icon.addEventListener('click',function(){
+                    //     window.location.href = "https://rayrixo.github.io/Fyp_testingAR/testin.html";
+                    // });
                   
                     scene.appendChild(icon);
                 });
