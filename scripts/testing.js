@@ -127,14 +127,16 @@ window.onload = () => {
                         ev.stopPropagation();
                         ev.preventDefault();
 
-                        const text = ev.target.getAttribute('text');
+                        // const text = ev.target.getAttribute('text');
+
+                        const name = ev.target.getAttribute('name');
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
                         if (el && el === ev.target) {
                             const label = document.createElement('span');
                             const container = document.createElement('div');
                             container.setAttribute('id', 'place-label');
-                            label.innerText = text;
+                            label.innerText = name;
                             container.appendChild(label);
                             document.body.appendChild(container);
 
