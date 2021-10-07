@@ -6,46 +6,115 @@ const loadPlaces = function(coords) {
     // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
     // const method = 'api';
 
-    const PLACES = [
-        {
-            name: "Chinese Heritage Center",
-            location: {
-                lat: 1.283421, // add here latitude if using static data
-                lng: 103.844455, // add here longitude if using static data
-
-            }
-        },
-
-        {
-            name: "Sri Maraimman Temple",
-            location:{
-                lat:1.282644,
-                lng:103.845227,
-            }
-        },
-
-        {
-            name: "Masjid Jamae",
-            location:{
-                lat:1.283190,
-                lng:103.845329,
-            }
-        },
-
-        {
-            name: "Tong Heng",
-            location:{
-                lat:1.281370,
-                lng:103.844937,
-            }
-        },
+    const Chinatown = [ 
+        { 
+            name: "Chinese Heritage Center", 
+            location: { 
+                lat: 1.283421, // add here latitude if using static data 
+                lng: 103.844455, // add here longitude if using static data 
+     
+            } 
+        }, 
+     
+        { 
+            name: "Sri Maraimman Temple", 
+            location:{ 
+                lat:1.282644, 
+                lng:103.845227, 
+            } 
+        }, 
+     
+        { 
+            name: "Masjid Jamae", 
+            location:{ 
+                lat:1.283190, 
+                lng:103.845329, 
+            } 
+        }, 
+     
+        { 
+            name: "Mural at Mohamed Ali Lane", 
+            location:{ 
+                lat:1.2827594818546095,  
+                lng:103.84583411762635, 
+            } 
+        }, 
+     
+        { 
+            name: "Tong Heng", 
+            location:{ 
+                lat:1.281370, 
+                lng:103.844937, 
+            } 
+        }, 
+     
+        { 
+            name: "Buddha Tooth Relic Temple", 
+            location:{ 
+                lat:1.281458, 
+                lng:103.844192, 
+            } 
+        }, 
+     
+        { 
+            name: "Sago Street", 
+            location:{ 
+                lat:1.281683, 
+                lng:103.844203, 
+            } 
+        }, 
+     
+        { 
+            name: "Chinatown Visitor Centre", 
+            location:{ 
+                lat:1.281790, 
+                lng:103.844128, 
+            } 
+        }, 
+     
+        { 
+            name: "Chinatown Food Street", 
+            location:{ 
+                lat:1.282301956083743, 
+                lng:103.8439297409357, 
+            } 
+        }, 
+     
+        { 
+            name: "Chinatown Complex", 
+            location:{ 
+                lat:1.2827469159145881,  
+                lng:103.84318438315941, 
+            } 
+        }, 
+        { 
+            name: "Nams Supplies", 
+            location:{ 
+                lat:1.2821764238861229,  
+                lng:103.8444112397504, 
+            } 
+        }, 
+        { 
+            name: "Thian Hock Keng Temple", 
+            location:{ 
+                lat:1.2810767548472404,  
+                lng:103.84769333260996 , 
+            } 
+        }, 
+        { 
+            name: "My Awesome Café", 
+            location:{ 
+                lat:1.2801230681341091,  
+                lng:103.84719956266558,  
+            } 
+        }, 
     ];
 
     // if (method === 'api') {
     //     return loadPlaceFromAPIs(coords);
     // }
 
-    return Promise.resolve(PLACES);
+    return Promise.resolve(Chinatown);
 };
 
 // getting places from REST APIs
