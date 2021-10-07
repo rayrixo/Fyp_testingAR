@@ -129,6 +129,8 @@ window.onload = () => {
                         }
                     };
 
+                    icon.addEventListener('click',clickListener);
+
 
                     // icon.addEventListener('click',function(){
                     //     window.location.href = "https://rayrixo.github.io/Fyp_testingAR/testin.html";
