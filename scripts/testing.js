@@ -136,11 +136,13 @@ window.onload = () => {
                             const label = document.createElement('span');
                             const container = document.createElement('div');
                             const para = document.createElement('p');
+                            
                             container.setAttribute('id', 'place-label');
-                            label.innerText = name;
-                            para.innerText = content;
+                            label.innerText = 'hello world';
+                            para.innerText = 'Hello Dunia';
                             container.appendChild(label);
                             container.appendChild(para);
+                            
                             document.body.appendChild(container);
 
                             setTimeout(() => {
