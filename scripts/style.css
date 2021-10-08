@@ -41,6 +41,10 @@ span {
   margin-right: 1em;
 }
 
+p{
+  margin-right: 1em;
+}
+
 div.debug {
   position: fixed;
   bottom: 20px;
