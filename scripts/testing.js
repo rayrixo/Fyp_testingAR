@@ -135,7 +135,7 @@ window.onload = () => {
                             const label = document.createElement('span');
                             const container = document.createElement('div');
                             container.setAttribute('id', 'place-label');
-                            label.innerText = content ;
+                            label.innerText = content;
                             container.appendChild(label);
                             document.body.appendChild(container);
 
