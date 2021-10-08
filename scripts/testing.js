@@ -128,7 +128,7 @@ window.onload = () => {
                         ev.preventDefault();
 
                         const name = ev.target.getAttribute('name');
-                        const content = ev.target.getAttribute('content');
+                        // const content = ev.target.getAttribute('content');
 
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
@@ -139,7 +139,7 @@ window.onload = () => {
                             
                             container.setAttribute('id', 'place-label');
                             label.innerText = name;
-                            para.innerText = content;
+                            para.innerText = places.content;
                             container.appendChild(label);
                             container.appendChild(para);
                             
