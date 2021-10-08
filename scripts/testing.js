@@ -17,7 +17,7 @@ const loadPlaces = function(coords) {
 
             },
 
-            content:"Hello House",
+            content:"Hello House"
         },
 
         {
@@ -26,7 +26,7 @@ const loadPlaces = function(coords) {
                 lat:1.444886,
                 lng:103.793890,
             },
-            content: "Hello Block 751", 
+            content: "Hello Block 751"
         },
 
         {
@@ -35,7 +35,7 @@ const loadPlaces = function(coords) {
                 lat:1.379992,
                 lng:103.848594,
             },
-            content: "Hello Block 751", 
+            content: "Hello Block 751"
         },
 
         {
@@ -44,7 +44,7 @@ const loadPlaces = function(coords) {
                 lat:1.379155,
                 lng:103.849828,
             },
-            content: "Hello Block 751", 
+            content: "Hello Block 751"
         },
 
         {
@@ -53,7 +53,7 @@ const loadPlaces = function(coords) {
                 lat:1.381504,
                 lng:103.844978,
             },
-            content: "Hello Block 751",
+            content: "Hello Block 751"
         },
     ];
 
