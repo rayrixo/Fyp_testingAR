@@ -51,7 +51,7 @@ const loadPlaces = function(coords) {
             name: "YCK",
             location:{
                 lat:1.381504,
-                lng:103.844978
+                lng:103.844978,
             },
             content: "Hello Block 751" 
         },
