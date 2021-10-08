@@ -17,7 +17,7 @@ const loadPlaces = function(coords) {
 
             },
 
-            text:"Hello House"
+            content:"Hello House"
         },
 
         {
@@ -26,7 +26,7 @@ const loadPlaces = function(coords) {
                 lat:1.444886,
                 lng:103.793890,
             },
-            text: "Hello Block 751" 
+            content: "Hello Block 751" 
         },
 
         {
@@ -35,7 +35,7 @@ const loadPlaces = function(coords) {
                 lat:1.379992,
                 lng:103.848594,
             },
-            text: "Hello Block 751" 
+            content: "Hello Block 751" 
         },
 
         {
@@ -44,7 +44,7 @@ const loadPlaces = function(coords) {
                 lat:1.379155,
                 lng:103.849828,
             },
-            text: "Hello Block 751" 
+            content: "Hello Block 751" 
         },
 
         {
@@ -53,7 +53,7 @@ const loadPlaces = function(coords) {
                 lat:1.381504,
                 lng:103.844978
             },
-            text: "Hello Block 751" 
+            content: "Hello Block 751" 
         },
     ];
 
@@ -127,16 +127,15 @@ window.onload = () => {
                         ev.stopPropagation();
                         ev.preventDefault();
 
-                        // const text = ev.target.getAttribute('text');
-
                         const name = ev.target.getAttribute('name');
+
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
                         if (el && el === ev.target) {
                             const label = document.createElement('span');
                             const container = document.createElement('div');
                             container.setAttribute('id', 'place-label');
-                            label.innerText = name;
+                            label.innerText = content ;
                             container.appendChild(label);
                             document.body.appendChild(container);
 
@@ -146,9 +145,7 @@ window.onload = () => {
                         }
                     };
 
-
-                    icon.addEventListener('click',clickListener);
-
+                    icon.addEventListener('click', clickListener);
 
                     // icon.addEventListener('click',function(){
                     //     window.location.href = "https://rayrixo.github.io/Fyp_testingAR/testin.html";
