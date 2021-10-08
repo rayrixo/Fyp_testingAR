@@ -115,6 +115,7 @@ window.onload = () => {
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
+                    icon.setAttribute('content',places.content);
                     icon.setAttribute('src', './assets/map-marker.png');
                     
 
@@ -128,7 +129,7 @@ window.onload = () => {
                         ev.preventDefault();
 
                         const name = ev.target.getAttribute('name');
-                        // const content = ev.target.getAttribute('content');
+                        const content = ev.target.getAttribute('content');
 
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
