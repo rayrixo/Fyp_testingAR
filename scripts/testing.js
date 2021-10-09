@@ -110,6 +110,7 @@ window.onload = () => {
                 places.forEach((place) => {
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
+                    const content = place.content;
 
                     // add place icon
                     const icon = document.createElement('a-image');
@@ -128,7 +129,6 @@ window.onload = () => {
                         ev.preventDefault();
 
                         const name = ev.target.getAttribute('name');
-                        const content = places.content;
 
                         const el = ev.detail.intersection && ev.detail.intersection.object.el;
 
