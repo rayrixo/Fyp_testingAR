@@ -137,11 +137,12 @@ window.onload = () => {
                             const container = document.createElement('div');
                             const para = document.createElement('p');
                             
+                                                        
                             container.setAttribute('id', 'place-label');
                             label.innerText = name;
                             para.innerText = content;
                             container.appendChild(label);
-                            container.appendChild(para);
+                            label.appendChild(para);
                             
                             document.body.appendChild(container);
 
