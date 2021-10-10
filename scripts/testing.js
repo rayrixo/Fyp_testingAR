@@ -12,8 +12,8 @@ const loadPlaces = function(coords) {
         { 
             name: "Chinese Heritage Center", 
             location: { 
-                lat: 1.283421, // add here latitude if using static data 
-                lng: 103.844455, // add here longitude if using static data 
+                lat: 1.445757, // add here latitude if using static data 
+                lng: 103.795065, // add here longitude if using static data 
      
             },
             content:"Get transported back in time and experience the footsteps of migrants in the late 19th century of singapore" 
