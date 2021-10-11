@@ -199,7 +199,7 @@ window.onload = () => {
                             const label = document.createElement('span');
                             const container = document.createElement('div');
                             const para = document.createElement('p');
-                            const butt = document.createElement('button');
+                            const butt = document.createElement('a');
                             
                             butt.setAttribute('class','btn btn-primary');
                             butt.setAttribute('href','./scripts/testing.js');                            
