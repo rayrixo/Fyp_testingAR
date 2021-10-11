@@ -203,7 +203,7 @@ window.onload = () => {
                             const butt = document.createElement('a');
                             
                             butt.setAttribute('class','btn btn-primary');
-                            butt.setAttribute('href',src);                            
+                            butt.setAttribute('href','https://rayrixo.github.io/Fyp_testingAR/testin.html');                            
                             container.setAttribute('id', 'place-label');
                             label.innerText = name;
                             para.innerText = content;
