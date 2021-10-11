@@ -204,6 +204,7 @@ window.onload = () => {
                             container.setAttribute('id', 'place-label');
                             label.innerText = name;
                             para.innerText = content;
+                            butt.innerText = "More Info";
                             container.appendChild(label);
                             label.appendChild(para);
                             label.appendChild(butt);
