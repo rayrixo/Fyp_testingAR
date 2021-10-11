@@ -17,7 +17,7 @@ const loadPlaces = function(coords) {
      
             },
             content:"Get transported back in time and experience the footsteps \n of migrants in the late 19th century of singapore",
-            src:'./scripts/testing.js' 
+            src:'https://rayrixo.github.io/Fyp_testingAR/testin.html' 
         }, 
      
         { 
