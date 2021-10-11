@@ -16,7 +16,8 @@ const loadPlaces = function(coords) {
                 lng: 103.795065, // add here longitude if using static data 
      
             },
-            content:"Get transported back in time and experience the footsteps \n of migrants in the late 19th century of singapore" 
+            content:"Get transported back in time and experience the footsteps \n of migrants in the late 19th century of singapore",
+            src:'./scripts/testing.js' 
         }, 
      
         { 
@@ -200,7 +201,8 @@ window.onload = () => {
                             const para = document.createElement('p');
                             const butt = document.createElement('button');
                             
-                            butt.setAttribute('class','btn btn-primary');                            
+                            butt.setAttribute('class','btn btn-primary');
+                            butt.setAttribute('href','./scripts/testing.js');                            
                             container.setAttribute('id', 'place-label');
                             label.innerText = name;
                             para.innerText = content;
