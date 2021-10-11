@@ -39,10 +39,10 @@ button {
 
 span {
   margin-right: 1em;
-  font-size:2em;
+  font-size:3em;
 }
 p{
-  font-size:1em;
+  font-size:0.5em;
 }
 
 
@@ -84,7 +84,7 @@ div.debug {
   width: 100%;
 }
 
-#place-label > span {
+span {
   z-index: 99999;
   padding: 0.25em;
   color: white;
