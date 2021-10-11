@@ -174,6 +174,7 @@ window.onload = () => {
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
                     const content = place.content;
+                    const src = place.src;
 
                     // add place icon
                     const icon = document.createElement('a-image');
@@ -202,7 +203,7 @@ window.onload = () => {
                             const butt = document.createElement('a');
                             
                             butt.setAttribute('class','btn btn-primary');
-                            butt.setAttribute('href','./scripts/testing.js');                            
+                            butt.setAttribute('href',src);                            
                             container.setAttribute('id', 'place-label');
                             label.innerText = name;
                             para.innerText = content;
