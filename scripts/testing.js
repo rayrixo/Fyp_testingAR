@@ -198,13 +198,15 @@ window.onload = () => {
                             const label = document.createElement('span');
                             const container = document.createElement('div');
                             const para = document.createElement('p');
+                            const butt = document.createElement('button');
                             
-                                                        
+                            butt.setAttribute('class','btn btn-primary');                            
                             container.setAttribute('id', 'place-label');
                             label.innerText = name;
                             para.innerText = content;
                             container.appendChild(label);
                             label.appendChild(para);
+                            label.appendChild(butt);
                             
                             document.body.appendChild(container);
 
