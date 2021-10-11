@@ -16,7 +16,7 @@ const loadPlaces = function(coords) {
                 lng: 103.795065, // add here longitude if using static data 
      
             },
-            content:"Get transported back in time and experience the footsteps of migrants in the late 19th century of singapore" 
+            content:"Get transported back in time and experience the footsteps \n of migrants in the late 19th century of singapore" 
         }, 
      
         { 
@@ -25,7 +25,7 @@ const loadPlaces = function(coords) {
                 lat:1.282644, 
                 lng:103.845227, 
             },
-            content:'This hindu temple is the oldest and largest of its kind in singapore'  
+            content:'This hindu temple is the oldest \n and largest of its kind in singapore'  
         }, 
      
         { 
@@ -34,7 +34,7 @@ const loadPlaces = function(coords) {
                 lat:1.283190, 
                 lng:103.845329, 
             },
-            content:'Established in 1826 it is one of the oldest mosque in singapore One of the only six in the country that conducts sermons in tamil' 
+            content:'Established in 1826 it is one of the oldest mosque in \n singapore One of the only six in the \n country that conducts sermons in tamil' 
         }, 
      
         { 
@@ -42,7 +42,8 @@ const loadPlaces = function(coords) {
             location:{ 
                 lat:1.2827594818546095,  
                 lng:103.84583411762635, 
-            } 
+            }, 
+            content:'Witness murals that depict the past \n through the eyes of singaporean artist Yip Yew Chong.'
         }, 
      
         { 
@@ -50,7 +51,8 @@ const loadPlaces = function(coords) {
             location:{ 
                 lat:1.281370, 
                 lng:103.844937, 
-            } 
+            },
+            content:'Tong Heng is the oldest confectioneries. \n Witness a story of resilience, \n determination and resourcefulness.' 
         }, 
      
         { 
@@ -58,7 +60,8 @@ const loadPlaces = function(coords) {
             location:{ 
                 lat:1.281458, 
                 lng:103.844192, 
-            } 
+            },
+            content:'This place hold special meaning for buddhist people as it stores the left canine tooth of buddha' 
         }, 
      
         { 
@@ -66,7 +69,8 @@ const loadPlaces = function(coords) {
             location:{ 
                 lat:1.281683, 
                 lng:103.844203, 
-            } 
+            },
+            content:'Experience the street of the dead where immigrants of the past with no family lived and died'
         }, 
      
         { 
