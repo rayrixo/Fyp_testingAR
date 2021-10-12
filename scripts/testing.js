@@ -8,7 +8,7 @@ const loadPlaces = function(coords) {
     // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
     // const method = 'api';
 
-    const PLACES = [ 
+    const chinatown = [ 
         { 
             name: "Chinese Heritage Center", 
             location: { 
@@ -26,7 +26,8 @@ const loadPlaces = function(coords) {
                 lat:1.282644, 
                 lng:103.845227, 
             },
-            content:'This hindu temple is the oldest \n and largest of its kind in singapore'  
+            content:'This hindu temple is the oldest \n and largest of its kind in singapore',
+            src:'https://rayrixo.github.io/Fyp_testingAR/SriMariamman.html'  
         }, 
      
         { 
@@ -35,7 +36,8 @@ const loadPlaces = function(coords) {
                 lat:1.283190, 
                 lng:103.845329, 
             },
-            content:'Established in 1826 it is one of the oldest mosque in \n singapore One of the only six in the \n country that conducts sermons in tamil' 
+            content:'Established in 1826 it is one of the oldest mosque in \n singapore One of the only six in the \n country that conducts sermons in tamil',
+            src:'https://rayrixo.github.io/Fyp_testingAR/MasjidJamae.html' 
         }, 
      
         { 
@@ -44,7 +46,8 @@ const loadPlaces = function(coords) {
                 lat:1.2827594818546095,  
                 lng:103.84583411762635, 
             }, 
-            content:'Witness murals that depict the past \n through the eyes of singaporean artist Yip Yew Chong.'
+            content:'Witness murals that depict the past \n through the eyes of singaporean artist Yip Yew Chong.',
+            src:'https://rayrixo.github.io/Fyp_testingAR/MuralStreet.html'
         }, 
      
         { 
@@ -53,7 +56,8 @@ const loadPlaces = function(coords) {
                 lat:1.281370, 
                 lng:103.844937, 
             },
-            content:'Tong Heng is the oldest confectioneries. \n Witness a story of resilience, \n determination and resourcefulness.' 
+            content:'Tong Heng is the oldest confectioneries. \n Witness a story of resilience, \n determination and resourcefulness.',
+            src:'https://rayrixo.github.io/Fyp_testingAR/TongHeng.html'
         }, 
      
         { 
@@ -62,7 +66,8 @@ const loadPlaces = function(coords) {
                 lat:1.281458, 
                 lng:103.844192, 
             },
-            content:'This place hold special meaning for buddhist people as it stores the left canine tooth of buddha' 
+            content:'This place hold special meaning for buddhist people as it stores the left canine tooth of buddha',
+            src:'https://rayrixo.github.io/Fyp_testingAR/BuddhaToothRelic.html' 
         }, 
      
         { 
@@ -71,52 +76,8 @@ const loadPlaces = function(coords) {
                 lat:1.281683, 
                 lng:103.844203, 
             },
-            content:'Experience the street of the dead where immigrants of the past with no family lived and died'
-        }, 
-     
-        { 
-            name: "Chinatown Visitor Centre", 
-            location:{ 
-                lat:1.281790, 
-                lng:103.844128, 
-            } 
-        }, 
-     
-        { 
-            name: "Chinatown Food Street", 
-            location:{ 
-                lat:1.282301956083743, 
-                lng:103.8439297409357, 
-            } 
-        }, 
-     
-        { 
-            name: "Chinatown Complex", 
-            location:{ 
-                lat:1.2827469159145881,  
-                lng:103.84318438315941, 
-            } 
-        }, 
-        { 
-            name: "Nams Supplies", 
-            location:{ 
-                lat:1.2821764238861229,  
-                lng:103.8444112397504, 
-            } 
-        }, 
-        { 
-            name: "Thian Hock Keng Temple", 
-            location:{ 
-                lat:1.2810767548472404,  
-                lng:103.84769333260996 , 
-            } 
-        }, 
-        { 
-            name: "My Awesome Café", 
-            location:{ 
-                lat:1.2801230681341091,  
-                lng:103.84719956266558,  
-            } 
+            content:'Experience the street of the dead where immigrants of the past with no family lived and died',
+            src:'https://rayrixo.github.io/Fyp_testingAR/SagoStreet.html' 
         }, 
     ];
 
@@ -125,7 +86,7 @@ const loadPlaces = function(coords) {
     //     return loadPlaceFromAPIs(coords);
     // }
 
-    return Promise.resolve(PLACES);
+    return Promise.resolve(chinatown);
 };
 
 // getting places from REST APIs
