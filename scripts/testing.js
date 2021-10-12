@@ -23,8 +23,8 @@ const loadPlaces = function(coords) {
         { 
             name: "Sri Maraimman Temple", 
             location:{ 
-                lat:1.282644, 
-                lng:103.845227, 
+                lat:1.445405, 
+                lng:103.795335, 
             },
             content:'This hindu temple is the oldest \n and largest of its kind in singapore',
             src:'https://rayrixo.github.io/Fyp_testingAR/SriMariamman.html'  
@@ -33,8 +33,8 @@ const loadPlaces = function(coords) {
         { 
             name: "Masjid Jamae", 
             location:{ 
-                lat:1.283190, 
-                lng:103.845329, 
+                lat:1.445077, 
+                lng:103.794433, 
             },
             content:'Established in 1826 it is one of the oldest mosque in \n singapore One of the only six in the \n country that conducts sermons in tamil',
             src:'https://rayrixo.github.io/Fyp_testingAR/MasjidJamae.html' 
