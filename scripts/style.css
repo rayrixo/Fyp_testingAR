@@ -82,6 +82,7 @@ div.debug {
   display: flex;
   justify-content: center;
   width: 100%;
+  opacity: 0.3;
 }
 
 #place-label > span {
