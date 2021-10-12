@@ -14,88 +14,88 @@ window.onload = () => {
       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
       console.log(i);
-      window.location = "https://rayrixo.github.io/Fyp_testingAR/SriMariamman.html";
+      window.location = "https://rayrixo.github.io/Fyp_testingAR/testin.html";
     }
   
-    const indexButton_Sri = document.getElementById('completeButton');
-  indexButton_Sri.onclick = function(){
-      i = landmarkIndex;
-      landmarkIndex = localStorage.getItem('landmarkIndex');
-      landmarkIndex = localStorage.setItem('landmarkIndex',++i);
+  //   const indexButton_Sri = document.getElementById('completeButton');
+  // indexButton_Sri.onclick = function(){
+  //     i = landmarkIndex;
+  //     landmarkIndex = localStorage.getItem('landmarkIndex');
+  //     landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
-      console.log(i);
-      window.location = "https://rayrixo.github.io/Fyp_testingAR/MasjidJamae.html";
-    }
-  
-  
-  
-  const indexButton = document.getElementById('completeButton');
-  indexButton.onclick = function(){
-  i = landmarkIndex;
-  landmarkIndex = localStorage.getItem('landmarkIndex');
-  landmarkIndex = localStorage.setItem('landmarkIndex',++i);
-  
-  console.log(i);
-  window.location = "https://rayrixo.github.io/Fyp_testingAR/TongHeng.html";
-  }
+  //     console.log(i);
+  //     window.location = "https://rayrixo.github.io/Fyp_testingAR/MasjidJamae.html";
+  //   }
   
   
   
+  // const indexButton = document.getElementById('completeButton');
+  // indexButton.onclick = function(){
+  // i = landmarkIndex;
+  // landmarkIndex = localStorage.getItem('landmarkIndex');
+  // landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
-  const indexButton = document.getElementById('completeButton');
-  indexButton.onclick = function(){
-  i = landmarkIndex;
-  landmarkIndex = localStorage.getItem('landmarkIndex');
-  landmarkIndex = localStorage.setItem('landmarkIndex',++i);
-  
-  console.log(i);
-  window.location = "https://rayrixo.github.io/Fyp_testingAR/BuddhaToothRelic.html";
-  }
-  
+  // console.log(i);
+  // window.location = "https://rayrixo.github.io/Fyp_testingAR/TongHeng.html";
+  // }
   
   
-  const indexButton = document.getElementById('completeButton');
-  indexButton.onclick = function(){
-      i = landmarkIndex;
-      landmarkIndex = localStorage.getItem('landmarkIndex');
-      landmarkIndex = localStorage.setItem('landmarkIndex',++i);
-  
-      console.log(i);
-      window.location = "https://rayrixo.github.io/Fyp_testingAR/PagodaStreet.html";
-  }
   
   
-  const indexButton = document.getElementById('completeButton');
-  indexButton.onclick = function(){
-      i = landmarkIndex;
-      landmarkIndex = localStorage.getItem('landmarkIndex');
-      landmarkIndex = localStorage.setItem('landmarkIndex',++i);
+  // const indexButton = document.getElementById('completeButton');
+  // indexButton.onclick = function(){
+  // i = landmarkIndex;
+  // landmarkIndex = localStorage.getItem('landmarkIndex');
+  // landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
-      console.log(i);
-      window.location = "https://rayrixo.github.io/Fyp_testingAR/SagoStreet.html";
-    }
-  
-  
-    const indexButton = document.getElementById('completeButton');
-  indexButton.onclick = function(){
-      i = landmarkIndex;
-      landmarkIndex = localStorage.getItem('landmarkIndex');
-      landmarkIndex = localStorage.setItem('landmarkIndex',++i);
-  
-      console.log(i);
-      window.location = "https://rayrixo.github.io/Fyp_testingAR/SagoStreet.html";
-    }
+  // console.log(i);
+  // window.location = "https://rayrixo.github.io/Fyp_testingAR/BuddhaToothRelic.html";
+  // }
   
   
-    const indexButton = document.getElementById('completeButton');
-    indexButton.onclick = function(){
-        i = landmarkIndex;
-        landmarkIndex = localStorage.getItem('landmarkIndex');
-        landmarkIndex = localStorage.setItem('landmarkIndex',++i);
+  
+  // const indexButton = document.getElementById('completeButton');
+  // indexButton.onclick = function(){
+  //     i = landmarkIndex;
+  //     landmarkIndex = localStorage.getItem('landmarkIndex');
+  //     landmarkIndex = localStorage.setItem('landmarkIndex',++i);
+  
+  //     console.log(i);
+  //     window.location = "https://rayrixo.github.io/Fyp_testingAR/PagodaStreet.html";
+  // }
+  
+  
+  // const indexButton = document.getElementById('completeButton');
+  // indexButton.onclick = function(){
+  //     i = landmarkIndex;
+  //     landmarkIndex = localStorage.getItem('landmarkIndex');
+  //     landmarkIndex = localStorage.setItem('landmarkIndex',++i);
+  
+  //     console.log(i);
+  //     window.location = "https://rayrixo.github.io/Fyp_testingAR/SagoStreet.html";
+  //   }
+  
+  
+  //   const indexButton = document.getElementById('completeButton');
+  // indexButton.onclick = function(){
+  //     i = landmarkIndex;
+  //     landmarkIndex = localStorage.getItem('landmarkIndex');
+  //     landmarkIndex = localStorage.setItem('landmarkIndex',++i);
+  
+  //     console.log(i);
+  //     window.location = "https://rayrixo.github.io/Fyp_testingAR/SagoStreet.html";
+  //   }
+  
+  
+  //   const indexButton = document.getElementById('completeButton');
+  //   indexButton.onclick = function(){
+  //       i = landmarkIndex;
+  //       landmarkIndex = localStorage.getItem('landmarkIndex');
+  //       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
     
-        console.log(i);
-        window.location = "https://rayrixo.github.io/Fyp_testingAR/MuralStreet.html";
-      }
+  //       console.log(i);
+  //       window.location = "https://rayrixo.github.io/Fyp_testingAR/MuralStreet.html";
+  //     }
     
     
   
