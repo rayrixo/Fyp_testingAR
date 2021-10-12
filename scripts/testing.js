@@ -4,9 +4,6 @@ var watchID,geoLoc,target,origin_lat,origin_lng;
 var flag = false; 
 target = {latitude : 1.377587,longitude: 103.850036};
 
-
-
-
 const loadPlaces = function(coords) {
     // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
     // const method = 'api';
@@ -126,8 +123,6 @@ function loadPlaceFromAPIs(position) {
 
 
 window.onload = () => {
-
-
     const scene = document.querySelector('a-scene');
 
     // first get current user location
