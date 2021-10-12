@@ -6,6 +6,12 @@ window.onload = () => {
   } else{ 
       var landmarkIndex = localStorage.setItem('landmarkIndex',0); 
   }
+
+
+  const congratButton = document.getElementById('congrats_button');
+  congratButton.onclick = function(){
+    window.location = "https://rayrixo.github.io/Fyp_testingAR/main.html";
+  }
   
   const indexButton_Testin = document.getElementById('complete_testin');
   indexButton_Testin.onclick = function(){
@@ -14,7 +20,7 @@ window.onload = () => {
       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
       console.log(i);
-      window.location = "https://rayrixo.github.io/Fyp_testingAR/SriMariamman.html";
+      window.location = "https://rayrixo.github.io/Fyp_testingAR/testing_congrats.html";
     }
   
   //   const indexButton_Sri = document.getElementById('completeButton');
