@@ -84,8 +84,7 @@ div.debug {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: black;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 #place-label > span {
@@ -93,7 +92,7 @@ div.debug {
   padding: 0.25em;
   color: white;
   text-align: center;
-  
+  background-color: black;
   border-radius: 10px;
 }
 
