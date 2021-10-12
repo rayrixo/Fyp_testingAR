@@ -14,7 +14,7 @@ window.onload = () => {
       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
       console.log(i);
-      window.location = "./testin.html";
+      window.location = "https://rayrixo.github.io/Fyp_testingAR/testin.html";
     }
   
     const indexButton = document.getElementById('completeButton');
@@ -24,7 +24,7 @@ window.onload = () => {
       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
       console.log(i);
-      window.location = "./testin.html";
+      window.location = "https://rayrixo.github.io/Fyp_testingAR/SriMariamman.html";
     }
   
   
@@ -46,7 +46,7 @@ window.onload = () => {
   landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
   console.log(i);
-  window.location = "./testin.html";
+  window.location = "https://rayrixo.github.io/Fyp_testingAR/MasjidJamae.html";
   }
   
   
@@ -59,7 +59,7 @@ window.onload = () => {
   landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
   console.log(i);
-  window.location = "./testin.html";
+  window.location = "https://rayrixo.github.io/Fyp_testingAR/TongHeng.html";
   }
   
   
@@ -71,7 +71,7 @@ window.onload = () => {
       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
       console.log(i);
-      window.location = "./testin.html";
+      window.location = "https://rayrixo.github.io/Fyp_testingAR/BuddhaToothRelic.html";
   }
   
   
@@ -82,7 +82,7 @@ window.onload = () => {
       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
       console.log(i);
-      window.location = "./testin.html";
+      window.location = "https://rayrixo.github.io/Fyp_testingAR/PagodaStreet.html";
     }
   
   
@@ -93,11 +93,20 @@ window.onload = () => {
       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
       console.log(i);
-      window.location = "./testin.html";
+      window.location = "https://rayrixo.github.io/Fyp_testingAR/SagoStreet.html";
     }
   
   
-  
+    const indexButton = document.getElementById('completeButton');
+    indexButton.onclick = function(){
+        i = landmarkIndex;
+        landmarkIndex = localStorage.getItem('landmarkIndex');
+        landmarkIndex = localStorage.setItem('landmarkIndex',++i);
+    
+        console.log(i);
+        window.location = "https://rayrixo.github.io/Fyp_testingAR/MuralStreet.html";
+      }
+    
     
   
   
