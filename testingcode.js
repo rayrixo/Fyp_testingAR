@@ -1,156 +1,294 @@
-window.onload = () => {
-    const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '﹖';
+var watchID,geoLoc,target,origin_lat,origin_lng;
+var flag = false; 
+target = {latitude : 1.377587,longitude: 103.850036};
 
-    let places = staticLoadPlaces();
-    renderPlaces(places);
-    
-    
-    
- 
-};
+const loadPlaces = function(coords) {
+    // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
+    // const method = 'api';
 
-function getLocation(){
-    navigator.geolocation.getCurrentPosition(showposition);
-}
-
-function showposition(currentPosition){
-    userlat = currentPosition.coords.latitude;
-    userlng = currentPosition.coords.longitude;
-}
-
-function staticLoadPlaces() {
-    return [
-        {
-            name: 'Testing',
-            location: {
-                lat: 1.445723, //1.378043
-                lng: 103.795070,//103.850071
+    const chinatown = [ 
+        { 
+            name: "Chinese Heritage Center", 
+            location: { 
+                lat: 1.445757, // add here latitude if using static data 
+                lng: 103.795065, // add here longitude if using static data 
+     
             },
-
-            body:'./assets/magnemite/scene.gltf'
-
- 
-        },
-
-        {
-            name:"Test2",
-            location:{
-                lat:1.445203,
-                lng:103.794357
+            content:"Get transported back in time and experience the footsteps \n of migrants in the late 19th century of singapore",
+            src:'https://rayrixo.github.io/Fyp_testingAR/testin.html' 
+        }, 
+     
+        { 
+            name: "Sri Maraimman Temple", 
+            location:{ 
+                lat:1.445405, 
+                lng:103.795335, 
             },
-            body:'./assets/magnemite/scene.gltf'
-        },
- 
-         {
-             name: 'YCK',
-             location: {
-                 lat: 1.381590,
-                 lng: 103.844905,
-             },
-
-             body: './assets/articuno/scene.gltf'
- 
-         },
-         
-         {
-             name: 'Block_A',
-             location: {
-                 lat: 1.380099,
-                 lng: 103.848593,
-             },
-
-             body:'./assets/dragonite/scene.gltf'
- 
-         },
- 
- 
-         {
-             name: 'Block_L',
-             location: {
-                 lat: 1.379198,
-                 lng: 103.849562,
-             },
-
-             body:'./assets/dragonite/scene.gltf'
- 
-         },
-        
+            content:'This hindu temple is the oldest \n and largest of its kind in singapore',
+            src:'https://rayrixo.github.io/Fyp_testingAR/SriMariamman.html'  
+        }, 
+     
+        { 
+            name: "Masjid Jamae", 
+            location:{ 
+                lat:1.445077, 
+                lng:103.794433, 
+            },
+            content:'Established in 1826 it is one of the oldest mosque in \n singapore One of the only six in the \n country that conducts sermons in tamil',
+            src:'https://rayrixo.github.io/Fyp_testingAR/MasjidJamae.html' 
+        }, 
+     
+        { 
+            name: "Mural at Mohamed Ali Lane", 
+            location:{ 
+                lat:1.2827594818546095,  
+                lng:103.84583411762635, 
+            }, 
+            content:'Witness murals that depict the past \n through the eyes of singaporean artist Yip Yew Chong.',
+            src:'https://rayrixo.github.io/Fyp_testingAR/MuralStreet.html'
+        }, 
+     
+        { 
+            name: "Tong Heng", 
+            location:{ 
+                lat:1.281370, 
+                lng:103.844937, 
+            },
+            content:'Tong Heng is the oldest confectioneries. \n Witness a story of resilience, \n determination and resourcefulness.',
+            src:'https://rayrixo.github.io/Fyp_testingAR/TongHeng.html'
+        }, 
+     
+        { 
+            name: "Buddha Tooth Relic Temple", 
+            location:{ 
+                lat:1.281458, 
+                lng:103.844192, 
+            },
+            content:'This place hold special meaning for buddhist people as it stores the left canine tooth of buddha',
+            src:'https://rayrixo.github.io/Fyp_testingAR/BuddhaToothRelic.html' 
+        }, 
+     
+        { 
+            name: "Sago Street", 
+            location:{ 
+                lat:1.281683, 
+                lng:103.844203, 
+            },
+            content:'Experience the street of the dead where immigrants of the past with no family lived and died',
+            src:'https://rayrixo.github.io/Fyp_testingAR/SagoStreet.html' 
+        }, 
     ];
- }
- 
 
+    // if (method === 'api') {
+    //     return loadPlaceFromAPIs(coords);
+    // }
 
-var models = [
-    {
-        url: './assets/magnemite/scene.gltf',
-        scale: '0.5 0.5 0.5',
-        info: 'Magnemite, Lv. 5, HP 10/10',
-        rotation: '0 180 0',
-    },
-    {
-        url: './assets/articuno/scene.gltf',
-        scale: '0.2 0.2 0.2',
-        rotation: '0 180 0',
-        info: 'Articuno, Lv. 80, HP 100/100',
-    },
-    {
-        url: './assets/dragonite/scene.gltf',
-        scale: '0.08 0.08 0.08',
-        rotation: '0 180 0',
-        info: 'Dragonite, Lv. 99, HP 150/150',
-    },
-];
-
-var modelIndex = 0;
-var setModel = function (model, entity) {
-    if (model.scale) {
-        entity.setAttribute('scale', model.scale);
-    }
-
-    if (model.rotation) {
-        entity.setAttribute('rotation', model.rotation);
-    }
-
-    if (model.position) {
-        entity.setAttribute('position', model.position);
-    }
-
-    entity.setAttribute('gltf-model', model.url);
-
-    const div = document.querySelector('.instructions');
-    div.innerText = model.info;
+    return Promise.resolve(Chinatown);
 };
 
-function renderPlaces(places) {
-    let scene = document.querySelector('a-scene');
+// getting places from REST APIs
+function loadPlaceFromAPIs(position) {
+    const params = {
+        radius: 300,    // search places not farther than this value (in meters)
+        clientId: 'CRDMPAGPE4KCZOMKKCLKKSJOKUKJZVE54LUROL2GLDS3UMTA',
+        clientSecret: 'TCWSXDU33J30GFTTPDRVL4SXMGMT3ON0ZWZVXWQPPINDMMWD',
+        version: '20300101',    // foursquare versioning, required but unuseful for this demo
+    };
+
+    // CORS Proxy to avoid CORS problems
+    const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+
+    // Foursquare API
+    const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
+        &ll=${position.latitude},${position.longitude}
+        &radius=${params.radius}
+        &client_id=${params.clientId}
+        &client_secret=${params.clientSecret}
+        &limit=15
+        &v=${params.version}`;
+    return fetch(endpoint)
+        .then((res) => {
+            return res.json()
+                .then((resp) => {
+                    return resp.response.venues;
+                })
+        })
+        .catch((err) => {
+            console.error('Error with places API', err);
+        })
+};
 
 
-    places.forEach((place) => {
-        distance = 0;
-        let latitude = place.location.lat;
-        let longitude = place.location.lng;
+window.onload = () => {
+    const scene = document.querySelector('a-scene');
 
-        // let camera = document.querySelector("a-camera");
-        // camera.setAttribute('gps-camera','maxDistance: 20;');
+    // first get current user location
+    return navigator.geolocation.getCurrentPosition(function (position) {
 
-        let model = document.createElement('a-entity');
-        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        // model.setAttribute('gltf-model', `${body}`);
-        
-        
+        // then use it to load from remote APIs some places nearby
+        loadPlaces(position.coords)
+            .then((places) => {
+                places.forEach((place) => {
+                    const latitude = place.location.lat;
+                    const longitude = place.location.lng;
+                    const content = place.content;
+                    const src = place.src;
 
-        setModel(models[modelIndex], model);
+                    // add place icon
+                    const icon = document.createElement('a-image');
+                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    icon.setAttribute('name', place.name);
+                    icon.setAttribute('src', './assets/map-marker.png');
+                    
 
-        // model.setAttribute('animation-mixer', '');
+                    // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
+                    icon.setAttribute('scale', '40, 40');
 
-        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('[gps-entity-place]');
-            modelIndex++;
-            var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], entity);
-        });
+                    icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
 
-        scene.appendChild(model);
+                    const clickListener = function(ev) {
+                        ev.stopPropagation();
+                        ev.preventDefault();
+
+                        const name = ev.target.getAttribute('name');
+
+                        const el = ev.detail.intersection && ev.detail.intersection.object.el;
+
+                        if (el && el === ev.target) {
+                            const label = document.createElement('span');
+                            const container = document.createElement('div');
+                            const para = document.createElement('p');
+                            const butt = document.createElement('a');
+                            
+                            butt.setAttribute('class','btn btn-secondary');
+                            butt.setAttribute('href',src);                            
+                            container.setAttribute('id', 'place-label');
+                            label.innerText = name;
+                            para.innerText = content;
+                            butt.innerText = "More Info";
+                            container.appendChild(label);
+                            label.appendChild(para);
+                            label.appendChild(butt);
+                            
+                            document.body.appendChild(container);
+
+                            setTimeout(() => {
+                                container.parentElement.removeChild(container);
+                            }, 2500);
+                        }
+                    };
+                    icon.addEventListener('click',clickListener);
+                  
+                    scene.appendChild(icon);
+                });
+            })
+    },
+        (err) => console.error('Error in retrieving position', err),
+        {
+            enableHighAccuracy: true,
+            maximumAge: 0,
+            timeout: 20000,
+        }
+    );
+};
+
+
+
+
+function success(position) {
+    var origin_lat = position.coords.latitude;
+    var origin_lng = position.coords.longitude;
+    if (target.latitude === origin_lat && target.longitude === crd.longitude){
+        navigator.geolocation.clearWatch(watchID)
+    }
+
+    const directionsService = new google.maps.DirectionsService();
+    const directionRenderer = new google.maps.DirectionsRenderer();
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 17,
+        center: { lat: origin_lat, lng: origin_lng },
+        zoomControl: true,
+        mapTypeControl: true,
+        scaleControl: true,
+        streetViewControl: true,
+        rotateControl: true,
+        fullscreenControl: true
     });
+    directionRenderer.setMap(map);
+    if (flag==true){
+        directionsService.route({
+                origin : {lat:origin_lat, lng:origin_lng},
+                destination : {lat:1.379155,lng:103.849828},
+                waypoints: [
+                    {location:{lat:1.380062,lng:103.848594}}
+                ],
+                optimizeWaypoints: true,
+                travelMode: google.maps.TravelMode.WALKING,
+            }) .then((response)=>{
+                directionRenderer.setDirections(response);
+                const route = response.routes[0];
+                const summaryPanel = document.getElementById("directions-panel")
+                summaryPanel.innerHTML="";
+
+                //For each route, display information
+                for (let i = 0; i < route.legs.length; i++) {
+                    const routeSegment = i + 1;
+
+                    summaryPanel.innerHTML +=
+                    "<b>Route Segment: " + routeSegment + "</b><br>";
+                    summaryPanel.innerHTML += route.legs[i].start_address + " to ";
+                    summaryPanel.innerHTML += route.legs[i].end_address + "<br>";
+                    summaryPanel.innerHTML += route.legs[i].distance.text + "<br><br>";
+                }
+            })
+    } else{
+        document.getElementById("submit").addEventListener("click", () => {
+            flag = true
+            directionsService.route({
+                origin : {lat:origin_lat, lng:origin_lng},
+                destination : "Nanyang Polytechnic Block L,180 Ang Mo Kio Ave 8,Singapore 569830",
+                waypoints: [
+                    {location:{lat:1.379992,lng:103.848457}}
+                ],
+                optimizeWaypoints: true,
+                travelMode: google.maps.TravelMode.WALKING,
+            }) .then((response)=>{
+                directionRenderer.setDirections(response);
+                const route = response.routes[0];
+                const summaryPanel = document.getElementById("directions-panel")
+                summaryPanel.innerHTML="";
+
+                //For each route, display information
+                for (let i = 0; i < route.legs.length; i++) {
+                    const routeSegment = i + 1;
+
+                    summaryPanel.innerHTML +=
+                    "<b>Route Segment: " + routeSegment + "</b><br>";
+                    summaryPanel.innerHTML += route.legs[i].start_address + " to ";
+                    summaryPanel.innerHTML += route.legs[i].end_address + "<br>";
+                    summaryPanel.innerHTML += route.legs[i].distance.text + "<br><br>";
+                }
+            })
+        }); 
+    }
+    
+    }
+
+    function errorHandler(err) {
+    if(err.code == 1) {
+        alert("Error: Access is denied!");
+    } else if( err.code == 2) {
+        alert("Error: Position is unavailable!");
+    }
+    }
+function getLocationUpdate(){
+    if (navigator.geolocation){
+        // timeout  in 60 seconds
+        var options = {timeout:60000};
+        geoLoc = navigator.geolocation
+        watchID = geoLoc.watchPosition(success,errorHandler,options)
+    } else{
+        alert("Browser does not support geolocation!")
+    }
 }
