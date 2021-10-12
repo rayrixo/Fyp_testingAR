@@ -11,7 +11,7 @@ const loadPlaces = function(coords) {
     // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
     // const method = 'api';
 
-    const PLACES = [ 
+    const chinatown = [ 
         { 
             name: "Chinese Heritage Center", 
             location: { 
@@ -89,7 +89,7 @@ const loadPlaces = function(coords) {
     //     return loadPlaceFromAPIs(coords);
     // }
 
-    return Promise.resolve(PLACES);
+    return Promise.resolve(chinatown);
 };
 
 // getting places from REST APIs
