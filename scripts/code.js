@@ -14,7 +14,7 @@ window.onload = () => {
       landmarkIndex = localStorage.setItem('landmarkIndex',++i);
   
       console.log(i);
-      window.location = "https://rayrixo.github.io/Fyp_testingAR/testin.html";
+      window.location = "https://rayrixo.github.io/Fyp_testingAR/SriMariamman.html";
     }
   
   //   const indexButton_Sri = document.getElementById('completeButton');
