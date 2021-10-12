@@ -163,7 +163,7 @@ window.onload = () => {
                             const para = document.createElement('p');
                             const butt = document.createElement('a');
                             
-                            butt.setAttribute('class','btn btn-grey');
+                            butt.setAttribute('class','btn btn-secondary');
                             butt.setAttribute('href',src);                            
                             container.setAttribute('id', 'place-label');
                             label.innerText = name;
