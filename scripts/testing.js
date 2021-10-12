@@ -126,12 +126,8 @@ function loadPlaceFromAPIs(position) {
 
 
 window.onload = () => {
-    var localStorage= window.localStorage 
-    if (localStorage.getItem('landmarkIndex')){ 
-        var landmarkIndex=localStorage.getItem('landmarkIndex') 
-    } else{ 
-        var landmarkIndex = localStorage.setItem('landmarkIndex',0) 
-    }
+
+
     const scene = document.querySelector('a-scene');
 
     // first get current user location
