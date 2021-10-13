@@ -17,7 +17,7 @@ const loadPlaces = function(coords) {
      
             },
             content:"Get transported back in time and experience the footsteps \n of migrants in the late 19th century of singapore",
-            src:'https://rayrixo.github.io/Fyp_testingAR/testin.html' 
+            src:'https://rayrixo.github.io/Fyp_testingAR/testin.html'
         }, 
      
         { 
@@ -69,6 +69,17 @@ const loadPlaces = function(coords) {
             content:'This place hold special meaning for buddhist people as it stores the left canine tooth of buddha',
             src:'https://rayrixo.github.io/Fyp_testingAR/BuddhaToothRelic.html' 
         }, 
+
+
+        { 
+            name: "Pagoda Street", 
+            location:{ 
+                lat:1.283330, 
+                lng:103.844450, 
+            },
+            content:'This place hold special meaning for buddhist people as it stores the left canine tooth of buddha',
+            src:'https://rayrixo.github.io/Fyp_testingAR/PagodaStreet.html' 
+        },
      
         { 
             name: "Sago Street", 
@@ -142,7 +153,7 @@ window.onload = () => {
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
-                    icon.setAttribute('look-at','gps-camera');
+                    icon.setAttribute('look-at','[gps-camera]');
                     
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
