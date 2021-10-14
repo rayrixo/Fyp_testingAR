@@ -154,6 +154,8 @@ window.onload = () => {
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
                     icon.setAttribute('look-at','[gps-camera]');
+                    distancemsg = icon.getAttribute('distance');
+                    console.log(distancemsg);
                     
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
@@ -203,8 +205,6 @@ window.onload = () => {
                     // });
                   
                     scene.appendChild(icon);
-                   distancemsg =  document.querySelector('a-image').getAttribute('distance');
-                   console.log(distancemsg);
                 });
             })
     },
