@@ -162,8 +162,7 @@ window.onload = () => {
                     icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
                     
 
-                    // distancemsg = icon.getAttribute('distance');
-                    // console.log(distancemsg);
+
 
                     const clickListener = function(ev) {
                         ev.stopPropagation();
@@ -204,6 +203,8 @@ window.onload = () => {
                     // });
                   
                     scene.appendChild(icon);
+                   distancemsg =  document.querySelector('a-image').getAttribute('distance');
+                   console.log(distancemsg);
                 });
             })
     },
