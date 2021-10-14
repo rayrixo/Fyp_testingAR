@@ -154,6 +154,7 @@ window.onload = () => {
                     icon.setAttribute('name', place.name);
                     icon.setAttribute('src', './assets/map-marker.png');
                     icon.setAttribute('look-at','[gps-camera]');
+                    icon.setAttribute('visible',false);
                     
 
                     // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
